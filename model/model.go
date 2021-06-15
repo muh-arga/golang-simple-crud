@@ -1,9 +1,9 @@
 package model
 
 type Todo struct {
-	Id        int    `json:"id"`
-	Name      string `json:"name"`
-	Completed bool   `json:"completed"`
+	Id        int    `json:"id" form:"id"`
+	Name      string `json:"name" form:"name"`
+	Completed bool   `json:"completed" form:"completed"`
 }
 
 var Todos = []*Todo{

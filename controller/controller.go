@@ -34,7 +34,7 @@ func GetTodo(ctx *fiber.Ctx) error {
 
 func CreateTodo(ctx *fiber.Ctx) error{
 	type requset struct {
-		Name string `json:"name"`
+		Name string `json:"name" form:"name"`
 	}
 
 	var body requset
@@ -59,8 +59,8 @@ func CreateTodo(ctx *fiber.Ctx) error{
 
 func UpdateTodo(ctx *fiber.Ctx) error{
 	type request struct{
-		Name 		*string 	`json:"name"`
-		Completed 	*bool 		`json:"completed"`
+		Name 		*string 	`json:"name" form:"name"`
+		Completed 	*bool 		`json:"completed" form:"completed"`
 	}
 
 	var body request
